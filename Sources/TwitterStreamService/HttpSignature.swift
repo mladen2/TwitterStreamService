@@ -62,7 +62,6 @@ class HttpSignature {
     func buildBaseString(_ paramString: String) -> String {
         var str = ""
         // method, base URL, param string
-    //    str += dict[AuthAndSignatureKey.oauthVersion]?.uppercased() ?? ""
         str += httpMethod.rawValue.uppercased()
         str += URLRequestConstants.urlParamDelimiter
         str += baseURL.addingPercentEncoding(withAllowedCharacters: .urlQueryValueAllowedFull) ?? ""
@@ -70,11 +69,6 @@ class HttpSignature {
         str += paramString.addingPercentEncoding(withAllowedCharacters: .urlQueryValueAllowedFull) ?? ""
         return str
     }
-
-    // Consumer secret    kAcSOqF21Fu85e7zjz7ZN2U4ZRhfV3WpwPAoE3Z7kBw
-    let sampleConsumerSecret = "kAcSOqF21Fu85e7zjz7ZN2U4ZRhfV3WpwPAoE3Z7kBw"
-    // OAuth token secret    LswwdoUaIvS8ltyTt5jkRh4J50vUPVVHtR2YPi5kE
-    let sampleOathTokenSecret = "LswwdoUaIvS8ltyTt5jkRh4J50vUPVVHtR2YPi5kE"
 
     func buildTheKey(consumerSecret: String, oathTokenSecret: String) -> String {
         var str = ""

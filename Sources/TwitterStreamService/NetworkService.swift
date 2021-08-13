@@ -68,7 +68,7 @@ public class NetworkService: NSObject {
 //        theSearchTerms = paramTermsString(arr2)
 //        let query = baseURL + URLRequestConstants.startParams + locations()
 
-        // follow
+        // follow - not working
 //        theSearchTerms = "elonmusk"
 //        let query = baseURL + URLRequestConstants.startParams + trackTerms(theSearchTerms)
 
